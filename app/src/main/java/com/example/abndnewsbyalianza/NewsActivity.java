@@ -34,7 +34,7 @@ public class NewsActivity extends AppCompatActivity
     private static final int EARTHQUAKE_LOADER_ID = 1;
 
     /** Adapter for the list of earthquakes */
-    private EarthquakeAdapter mAdapter;
+    private NewsAdapter mAdapter;
 
     /** TextView that is displayed when the list is empty */
     private TextView mEmptyStateTextView;
@@ -51,7 +51,7 @@ public class NewsActivity extends AppCompatActivity
         earthquakeListView.setEmptyView(mEmptyStateTextView);
 
         // Create a new adapter that takes an empty list of earthquakes as input
-        mAdapter = new EarthquakeAdapter(this, new ArrayList<News>());
+        mAdapter = new NewsAdapter(this, new ArrayList<News>());
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
