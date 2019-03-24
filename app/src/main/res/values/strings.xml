@@ -1,3 +1,19 @@
 <resources>
+
+    <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">News By Alianza</string>
+
+    <!-- Default text to show with the earthquake location ("Near the Pacific-Antarctic Ridge")
+     if no specific kilometer distance from the primary location is given [CHAR LIMIT=30] -->
+    <string name="near_the">Near the</string>
+
+    <!-- Text to display in the list when there are no earthquakes [CHAR LIMIT=NONE] -->
+    <string name="no_earthquakes">No earthquakes found.</string>
+
+    <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+    <string name="no_internet_connection">
+        Uh oh! It appears you have no internet connection!
+        Bring us to life by turning on your wi-fi or mobile data. We promise, you won\'t regret it!
+    </string>
+
 </resources>
