@@ -23,7 +23,7 @@ public class NewsActivity extends AppCompatActivity
 
     private static final String LOG_TAG = NewsActivity.class.getName();
 
-    /** URL for entertainment news articles from the Guadian's website */
+    /** URL for entertainment news articles from the Guardian's website */
     private static final String GUARDIAN_NEWS_REQUEST_URL =
             "https://content.guardianapis.com/search?q=entertainment&from-date=2019-02-02&show-tags=contributor&order-by=newest&show-references=author&api-key=fe0c6c04-c500-4c20-83bf-8ece43c8e676 ";
 
