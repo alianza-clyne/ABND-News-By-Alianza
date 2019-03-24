@@ -23,9 +23,9 @@ public class NewsActivity extends AppCompatActivity
 
     private static final String LOG_TAG = NewsActivity.class.getName();
 
-    /** URL for earthquake data from the USGS dataset */
-    private static final String USGS_REQUEST_URL =
-            "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=6&limit=10";
+    /** URL for entertainment news articles from the Guadian's website */
+    private static final String GUARDIAN_NEWS_REQUEST_URL =
+            "https://content.guardianapis.com/search?q=entertainment&from-date=2019-02-02&show-tags=contributor&order-by=newest&show-references=author&api-key=fe0c6c04-c500-4c20-83bf-8ece43c8e676 ";
 
     /**
      * Constant value for the earthquake loader ID. We can choose any integer.
@@ -106,7 +106,7 @@ public class NewsActivity extends AppCompatActivity
     @Override
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
         // Create a new loader for the given URL
-        return new NewsLoader(this, USGS_REQUEST_URL);
+        return new NewsLoader(this, GUARDIAN_NEWS_REQUEST_URL);
     }
 
     @Override
