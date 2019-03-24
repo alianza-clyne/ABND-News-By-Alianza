@@ -181,10 +181,10 @@ public final class QueryUtils {
 
                 // Create a new {@link News} object with the magnitude, location, time,
                 // and url from the JSON response.
-                News news = new News(magnitude, location, time, url);
+                News newsfeed = new News(magnitude, location, time, url);
 
                 // Add the new {@link News} to the list of news.
-                news.add(news);
+                news.add(newsfeed);
             }
 
         } catch (JSONException e) {
