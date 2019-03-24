@@ -1,9 +1,9 @@
 package com.example.abndnewsbyalianza;
 
 /**
- * An {@link Earthquake} object contains information related to a single earthquake.
+ * An {@link News} object contains information related to a single earthquake.
  */
-public class Earthquake {
+public class News {
 
     /** Magnitude of the earthquake */
     private double mMagnitude;
@@ -18,7 +18,7 @@ public class Earthquake {
     private String mUrl;
 
     /**
-     * Constructs a new {@link Earthquake} object.
+     * Constructs a new {@link News} object.
      *
      * @param magnitude is the magnitude (size) of the earthquake
      * @param location is the location where the earthquake happened
@@ -26,7 +26,7 @@ public class Earthquake {
      *                           earthquake happened
      * @param url is the website URL to find more details about the earthquake
      */
-    public Earthquake(double magnitude, String location, long timeInMilliseconds, String url) {
+    public News(double magnitude, String location, long timeInMilliseconds, String url) {
         mMagnitude = magnitude;
         mLocation = location;
         mTimeInMilliseconds = timeInMilliseconds;

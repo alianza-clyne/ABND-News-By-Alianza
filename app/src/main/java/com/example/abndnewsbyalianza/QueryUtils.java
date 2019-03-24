@@ -35,9 +35,9 @@ public final class QueryUtils {
     }
 
     /**
-     * Query the USGS dataset and return a list of {@link Earthquake} objects.
+     * Query the USGS dataset and return a list of {@link News} objects.
      */
-    public static List<Earthquake> fetchEarthquakeData(String requestUrl) {
+    public static List<News> fetchEarthquakeData(String requestUrl) {
         // Create URL object
         URL url = createUrl(requestUrl);
 
@@ -49,11 +49,11 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
-        List<Earthquake> earthquakes = extractFeatureFromJson(jsonResponse);
+        // Extract relevant fields from the JSON response and create a list of {@link News}s
+        List<News> news = extractFeatureFromJson(jsonResponse);
 
-        // Return the list of {@link Earthquake}s
-        return earthquakes;
+        // Return the list of {@link News}s
+        return news;
     }
 
     /**
@@ -132,17 +132,17 @@ public final class QueryUtils {
     }
 
     /**
-     * Return a list of {@link Earthquake} objects that has been built up from
+     * Return a list of {@link News} objects that has been built up from
      * parsing the given JSON response.
      */
-    private static List<Earthquake> extractFeatureFromJson(String earthquakeJSON) {
+    private static List<News> extractFeatureFromJson(String earthquakeJSON) {
         // If the JSON string is empty or null, then return early.
         if (TextUtils.isEmpty(earthquakeJSON)) {
             return null;
         }
 
-        // Create an empty ArrayList that we can start adding earthquakes to
-        List<Earthquake> earthquakes = new ArrayList<>();
+        // Create an empty ArrayList that we can start adding news to
+        List<News> news = new ArrayList<>();
 
         // Try to parse the JSON response string. If there's a problem with the way the JSON
         // is formatted, a JSONException exception object will be thrown.
@@ -153,18 +153,18 @@ public final class QueryUtils {
             JSONObject baseJsonResponse = new JSONObject(earthquakeJSON);
 
             // Extract the JSONArray associated with the key called "features",
-            // which represents a list of features (or earthquakes).
+            // which represents a list of features (or news).
             JSONArray earthquakeArray = baseJsonResponse.getJSONArray("features");
 
-            // For each earthquake in the earthquakeArray, create an {@link Earthquake} object
+            // For each earthquake in the earthquakeArray, create an {@link News} object
             for (int i = 0; i < earthquakeArray.length(); i++) {
 
-                // Get a single earthquake at position i within the list of earthquakes
+                // Get a single news at position i within the list of news
                 JSONObject currentEarthquake = earthquakeArray.getJSONObject(i);
 
-                // For a given earthquake, extract the JSONObject associated with the
+                // For a given news, extract the JSONObject associated with the
                 // key called "properties", which represents a list of all properties
-                // for that earthquake.
+                // for that news.
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
 
                 // Extract the value for the key called "mag"
@@ -179,12 +179,12 @@ public final class QueryUtils {
                 // Extract the value for the key called "url"
                 String url = properties.getString("url");
 
-                // Create a new {@link Earthquake} object with the magnitude, location, time,
+                // Create a new {@link News} object with the magnitude, location, time,
                 // and url from the JSON response.
-                Earthquake earthquake = new Earthquake(magnitude, location, time, url);
+                News news = new News(magnitude, location, time, url);
 
-                // Add the new {@link Earthquake} to the list of earthquakes.
-                earthquakes.add(earthquake);
+                // Add the new {@link News} to the list of news.
+                news.add(news);
             }
 
         } catch (JSONException e) {
@@ -194,8 +194,8 @@ public final class QueryUtils {
             Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
         }
 
-        // Return the list of earthquakes
-        return earthquakes;
+        // Return the list of news
+        return news;
     }
 
 }

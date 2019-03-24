@@ -16,12 +16,12 @@ import java.util.List;
 
 /**
  * An {@link EarthquakeAdapter} knows how to create a list item layout for each earthquake
- * in the data source (a list of {@link Earthquake} objects).
+ * in the data source (a list of {@link News} objects).
  *
  * These list item layouts will be provided to an adapter view like ListView
  * to be displayed to the user.
  */
-public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
+public class EarthquakeAdapter extends ArrayAdapter<News> {
 
     /**
      * The part of the location string from the USGS service that we use to determine
@@ -33,10 +33,10 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
      * Constructs a new {@link EarthquakeAdapter}.
      *
      * @param context of the app
-     * @param earthquakes is the list of earthquakes, which is the data source of the adapter
+     * @param news is the list of news, which is the data source of the adapter
      */
-    public EarthquakeAdapter(Context context, List<Earthquake> earthquakes) {
-        super(context, 0, earthquakes);
+    public EarthquakeAdapter(Context context, List<News> news) {
+        super(context, 0, news);
     }
 
     /**
@@ -54,12 +54,12 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         }
 
         // Find the earthquake at the given position in the list of earthquakes
-        Earthquake currentEarthquake = getItem(position);
+        News currentNews = getItem(position);
 
         // Find the TextView with view ID magnitude
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
         // Format the magnitude to show 1 decimal place
-        String formattedMagnitude = formatMagnitude(currentEarthquake.getMagnitude());
+        String formattedMagnitude = formatMagnitude(currentNews.getMagnitude());
         // Display the magnitude of the current earthquake in that TextView
         magnitudeView.setText(formattedMagnitude);
 
@@ -67,13 +67,13 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         // Fetch the background from the TextView, which is a GradientDrawable.
         GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeView.getBackground();
         // Get the appropriate background color based on the current earthquake magnitude
-        int magnitudeColor = getMagnitudeColor(currentEarthquake.getMagnitude());
+        int magnitudeColor = getMagnitudeColor(currentNews.getMagnitude());
         // Set the color on the magnitude circle
         magnitudeCircle.setColor(magnitudeColor);
 
-        // Get the original location string from the Earthquake object,
+        // Get the original location string from the News object,
         // which can be in the format of "5km N of Cairo, Egypt" or "Pacific-Antarctic Ridge".
-        String originalLocation = currentEarthquake.getLocation();
+        String originalLocation = currentNews.getLocation();
 
         // If the original location string (i.e. "5km N of Cairo, Egypt") contains
         // a primary location (Cairo, Egypt) and a location offset (5km N of that city)
@@ -111,7 +111,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         locationOffsetView.setText(locationOffset);
 
         // Create a new Date object from the time in milliseconds of the earthquake
-        Date dateObject = new Date(currentEarthquake.getTimeInMilliseconds());
+        Date dateObject = new Date(currentNews.getTimeInMilliseconds());
 
         // Find the TextView with view ID date
         TextView dateView = (TextView) listItemView.findViewById(R.id.date);
