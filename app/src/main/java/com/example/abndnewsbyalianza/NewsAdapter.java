@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * An {@link NewsAdapter} knows how to create a list item layout for each earthquake
+ * An {@link NewsAdapter} knows how to create a list item layout for each entertainment news article
  * in the data source (a list of {@link News} objects).
  *
  * These list item layouts will be provided to an adapter view like ListView
