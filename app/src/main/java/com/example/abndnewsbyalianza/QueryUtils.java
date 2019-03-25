@@ -179,7 +179,7 @@ public final class QueryUtils {
                 // Extract the value for the key called "url"
                 String url = properties.getString("url");
 
-                // Create a new {@link News} object with the magnitude, location, time,
+                // Create a new {@link News} object with the news_article_section_name, location, time,
                 // and url from the JSON response.
                 News newsfeed = new News(magnitude, location, time, url);
 

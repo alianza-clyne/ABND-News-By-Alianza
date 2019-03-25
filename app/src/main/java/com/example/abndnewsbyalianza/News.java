@@ -27,7 +27,7 @@ public class News {
      *                               news article appears in
      * @param NewsArticleTitle is the title of the entertainment news article
      * @param NewsArticleAuthor is the author of the entertainment news article
-     * @param NewsArticlePublicationDate is the date the entertainment news article was published
+     * @param NewsArticlePublicationDate is the news_article_publication_date the entertainment news article was published
      * @param NewsArticleUrl is the website URL for the entertainment news article
      */
     public News(String NewsArticleSectionName, String NewsArticleTitle, String NewsArticleAuthor,
@@ -63,7 +63,7 @@ public class News {
     }
 
     /**
-     * Returns the date the entertainment news article was published.
+     * Returns the news_article_publication_date the entertainment news article was published.
      */
     public String getNewsArticlePublicationDate() {
         return mNewsArticlePublicationDate;
