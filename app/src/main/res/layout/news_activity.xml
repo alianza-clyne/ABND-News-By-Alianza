@@ -20,7 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textAppearance="?android:textAppearanceMedium"/>
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceLarge"/>
 
     <!-- Loading indicator is only shown before the first load -->
     <ProgressBar
