@@ -14,13 +14,12 @@
 
     <TextView
         android:id="@+id/news_article_section_name"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:background="@drawable/magnitude_circle"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:textColor="@android:color/white"
+        android:textColor="@color/textColorNewsArticleDetails"
         android:textSize="16sp"
         tools:text="Article Section" />
 
@@ -41,7 +40,7 @@
             android:fontFamily="sans-serif-medium"
             android:maxLines="1"
             android:textAllCaps="true"
-            android:textColor="@color/textColorEarthquakeDetails"
+            android:textColor="@color/textColorNewsArticleDetails"
             android:textSize="12sp"
             tools:text="Author name" />
 
@@ -51,7 +50,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textColor="@color/textColorEarthquakeLocation"
+            android:textColor="@color/textColorNewsArticleTitle"
             android:textSize="16sp"
             tools:text="Article title" />
 
@@ -70,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:textColor="@color/textColorEarthquakeDetails"
+            android:textColor="@color/textColorNewsArticleDetails"
             android:textSize="12sp"
             tools:text="Mar 6, 2019" />
 

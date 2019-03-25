@@ -159,7 +159,7 @@ public final class QueryUtils {
 
             // Extract the JSONArray associated with the key called "results",
             // which represents a list of results from the Guardian API request (or entertainment news articles).
-            JSONArray newsArticleArray = baseJsonResponse.getJSONArray("results");
+            JSONArray newsArticleArray = newsArticleResponse.getJSONArray("results");
 
             // For each entertainment news article in the newsArticleArray, create an {@link News} article object
             for (int i = 0; i < newsArticleArray.length(); i++) {
@@ -185,27 +185,6 @@ public final class QueryUtils {
                 }else{
                     NewsArticleAuthor = "No Author";
                 }
-
-                /*
-                // Check if array object "references" has any value
-                if (currentNewsArticle.getJSONArray("tags").length() > 0) {
-                    // If so, extract its (author) value
-                    JSONObject currentNewsArticleAuthor = NewsArticleAuthor.getJSONObject(0);
-                    NewsArticleAuthor = currentNewsArticleAuthor.getString("webTitle");
-                }
-                */
-
-                /*
-                JSONArray tagsauthor = currentResults.getJSONArray("tags");
-                String author="";
-                if (tagsauthor.length()!= 0) {
-                    JSONObject currenttagsauthor = tagsauthor.getJSONObject(0);
-                    author = currenttagsauthor.getString("webTitle");
-                }else{
-                    author = "No Author ..";
-                }
-                */
-
 
                 // Extract the value for the key called "webPublicationDate"
                 String NewsArticlePublicationDate = currentNewsArticle.getString("webPublicationDate");
