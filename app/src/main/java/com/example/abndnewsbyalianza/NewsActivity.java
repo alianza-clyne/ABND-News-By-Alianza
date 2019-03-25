@@ -66,7 +66,7 @@ public class NewsActivity extends AppCompatActivity
                 News currentNews = mAdapter.getItem(position);
 
                 // Convert the String URL into a URI object (to pass into the Intent constructor)
-                Uri newsUri = Uri.parse(currentNews.getUrl());
+                Uri newsUri = Uri.parse(currentNews.getNewsArticleUrl());
 
                 // Create a new intent to view the entertainment news article URI
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);

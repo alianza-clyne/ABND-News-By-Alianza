@@ -1,64 +1,79 @@
 package com.example.abndnewsbyalianza;
 
 /**
- * An {@link News} object contains information related to a single earthquake.
+ * An {@link News} object contains information related to a single entertainment news article.
  */
 public class News {
 
-    /** Magnitude of the earthquake */
-    private double mMagnitude;
+    /** The name of The Guardian section that the entertainment news article appears in */
+    private String mNewsArticleSectionName;
 
-    /** Location of the earthquake */
-    private String mLocation;
+    /** Title of the entertainment news article */
+    private String mNewsArticleTitle;
 
-    /** Time of the earthquake */
-    private long mTimeInMilliseconds;
+    /** Author of the entertainment news article */
+    private String mNewsArticleAuthor;
 
-    /** Website URL of the earthquake */
-    private String mUrl;
+    /** Date the entertainment news article was published */
+    private String mNewsArticlePublicationDate;
+
+    /** Website URL for the entertainment news article */
+    private String mNewsArticleUrl;
 
     /**
      * Constructs a new {@link News} object.
      *
-     * @param magnitude is the magnitude (size) of the earthquake
-     * @param location is the location where the earthquake happened
-     * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
-     *                           earthquake happened
-     * @param url is the website URL to find more details about the earthquake
+     * @param NewsArticleSectionName is the name of The Guardian section that the entertainment
+     *                               news article appears in
+     * @param NewsArticleTitle is the title of the entertainment news article
+     * @param NewsArticleAuthor is the author of the entertainment news article
+     * @param NewsArticlePublicationDate is the date the entertainment news article was published
+     * @param NewsArticleUrl is the website URL for the entertainment news article
      */
-    public News(double magnitude, String location, long timeInMilliseconds, String url) {
-        mMagnitude = magnitude;
-        mLocation = location;
-        mTimeInMilliseconds = timeInMilliseconds;
-        mUrl = url;
+    public News(String NewsArticleSectionName, String NewsArticleTitle, String NewsArticleAuthor,
+                String NewsArticlePublicationDate, String NewsArticleUrl) {
+
+        mNewsArticleSectionName = NewsArticleSectionName;
+        mNewsArticleTitle = NewsArticleTitle;
+        mNewsArticleAuthor = NewsArticleAuthor;
+        mNewsArticlePublicationDate = NewsArticlePublicationDate;
+        mNewsArticleUrl = NewsArticleUrl;
     }
 
     /**
-     * Returns the magnitude of the earthquake.
+     * Returns the name of The Guardian section that the entertainment
+     * news article appears in.
      */
-    public double getMagnitude() {
-        return mMagnitude;
+    public String getNewsArticleSectionName() {
+        return mNewsArticleSectionName;
     }
 
     /**
-     * Returns the location of the earthquake.
+     * Returns the title of the entertainment news article.
      */
-    public String getLocation() {
-        return mLocation;
+    public String getNewsArticleTitle() {
+        return mNewsArticleTitle;
     }
 
     /**
-     * Returns the time of the earthquake.
+     * Returns the title of the author of the entertainment news article.
      */
-    public long getTimeInMilliseconds() {
-        return mTimeInMilliseconds;
+    public String getNewsArticleAuthor() {
+        return mNewsArticleAuthor;
     }
 
     /**
-     * Returns the website URL to find more information about the earthquake.
+     * Returns the date the entertainment news article was published.
      */
-    public String getUrl() {
-        return mUrl;
+    public String getNewsArticlePublicationDate() {
+        return mNewsArticlePublicationDate;
+    }
+
+    /**
+     * Returns the website URL for the entertainment news article.
+     */
+    public String getNewsArticleUrl() {
+        return mNewsArticleUrl;
     }
 }
 

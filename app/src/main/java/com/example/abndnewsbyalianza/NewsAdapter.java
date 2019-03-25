@@ -59,7 +59,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         // Find the TextView with view ID magnitude
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
         // Format the magnitude to show 1 decimal place
-        String formattedMagnitude = formatMagnitude(currentNews.getMagnitude());
+        String formattedMagnitude = formatMagnitude(currentNews.getNewsArticleSectionName());
         // Display the magnitude of the current earthquake in that TextView
         magnitudeView.setText(formattedMagnitude);
 
@@ -67,13 +67,13 @@ public class NewsAdapter extends ArrayAdapter<News> {
         // Fetch the background from the TextView, which is a GradientDrawable.
         GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeView.getBackground();
         // Get the appropriate background color based on the current earthquake magnitude
-        int magnitudeColor = getMagnitudeColor(currentNews.getMagnitude());
+        int magnitudeColor = getMagnitudeColor(currentNews.getNewsArticleSectionName());
         // Set the color on the magnitude circle
         magnitudeCircle.setColor(magnitudeColor);
 
         // Get the original location string from the News object,
         // which can be in the format of "5km N of Cairo, Egypt" or "Pacific-Antarctic Ridge".
-        String originalLocation = currentNews.getLocation();
+        String originalLocation = currentNews.getNewsArticleTitle();
 
         // If the original location string (i.e. "5km N of Cairo, Egypt") contains
         // a primary location (Cairo, Egypt) and a location offset (5km N of that city)
@@ -111,7 +111,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         locationOffsetView.setText(locationOffset);
 
         // Create a new Date object from the time in milliseconds of the earthquake
-        Date dateObject = new Date(currentNews.getTimeInMilliseconds());
+        Date dateObject = new Date(currentNews.getNewsArticlePublicationDate());
 
         // Find the TextView with view ID date
         TextView dateView = (TextView) listItemView.findViewById(R.id.date);
