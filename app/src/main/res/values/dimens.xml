@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- This is the measurement for the news article section name text -->
+    <dimen name="section_name_text">20sp</dimen>
+
+    <!-- This is the measurement for the news article title text -->
+    <dimen name="title_text">18sp</dimen>
+
+    <!-- This is the measurement for the news article details text -->
+    <dimen name="details_text">16sp</dimen>
+
+    <!-- This is the measurement for the height of the list -->
+    <dimen name="list_height">120dp</dimen>
+
+    <!-- This is the measurement for web_article_arrow-->
+    <dimen name="web_article_arrow_height">20dp</dimen>
+</resources>
