@@ -8,7 +8,7 @@
     <string name="near_the">Near the</string>
 
     <!-- Text to display in the list when there are no news [CHAR LIMIT=NONE] -->
-    <string name="no_earthquakes">No news found.</string>
+    <string name="no_news_articles_found">Looks like we\'re have a dry spell! No articles have been found.</string>
 
     <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
     <string name="no_internet_connection">
