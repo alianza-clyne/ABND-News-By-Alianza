@@ -55,13 +55,13 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         // Find the TextView with view ID news_article_title
         TextView NewsArticleTitleView = (TextView) listItemView.findViewById(R.id.news_article_title);
-        String ArticleTitle = currentNews.getNewsArticleSectionName();
+        String ArticleTitle = currentNews.getNewsArticleTitle();
         // Display the title of the current entertainment news article in that TextView
         NewsArticleTitleView.setText(ArticleTitle);
 
         // Find the TextView with view ID news_article_author
         TextView NewsArticleAuthorView = (TextView) listItemView.findViewById(R.id.news_article_author);
-        String ArticleAuthor = currentNews.getNewsArticleSectionName();
+        String ArticleAuthor = currentNews.getNewsArticleAuthor();
         // Display the author of the current entertainment news article in that TextView
         NewsArticleAuthorView.setText(ArticleAuthor);
 
