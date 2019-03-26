@@ -159,13 +159,13 @@ public final class QueryUtils {
 
             // Extract the JSONArray associated with the key called "results",
             // which represents a list of results from the Guardian API request (or entertainment news articles).
-            JSONArray newsArticleArray = newsArticleResponse.getJSONArray("results");
+            JSONArray newsArticleResultsArray = newsArticleResponse.getJSONArray("results");
 
-            // For each entertainment news article in the newsArticleArray, create an {@link News} article object
-            for (int i = 0; i < newsArticleArray.length(); i++) {
+            // For each entertainment news article in the newsArticleResultsArray, create an {@link News} article object
+            for (int i = 0; i < newsArticleResultsArray.length(); i++) {
 
                 // Get a single news article at position i within the list of news articles
-                JSONObject currentNewsArticle = newsArticleArray.getJSONObject(i);
+                JSONObject currentNewsArticle = newsArticleResultsArray.getJSONObject(i);
 
                 // Extract the value for the key called "sectionName"
                 String NewsArticleSectionName = currentNewsArticle.getString("sectionName");
