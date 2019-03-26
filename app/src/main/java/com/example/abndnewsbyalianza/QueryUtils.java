@@ -182,12 +182,12 @@ public final class QueryUtils {
                     // If so, extract its (webTitle) value for the author's name
                     NewsArticleAuthor = currentNewsArticle.getJSONArray("tags").getJSONObject(0).getString("webTitle");
                 }else{
-                    NewsArticleAuthor = "No Author";
+                    NewsArticleAuthor = "No Author Listed";
                 }
 
 
                 // Extract the value for the key called "webPublicationDate"
-                String NewsArticlePublicationDate = currentNewsArticle.getString("webPublicationDate");
+                String NewsArticlePublicationDate = formatDate(currentNewsArticle.getString("webPublicationDate"));
 
                 // Extract the value for the key called "webUrl"
                 String NewsArticleUrl = currentNewsArticle.getString("webUrl");
@@ -209,6 +209,13 @@ public final class QueryUtils {
 
         // Return the list of news
         return news;
+    }
+
+    // Create a formatDate
+    private static String formatDate(String NewsArticlePublicationDate){
+
+        // Get ride of time zone information and only return the date format
+        return NewsArticlePublicationDate.substring(0, NewsArticlePublicationDate.indexOf("T"));
     }
 
 }
