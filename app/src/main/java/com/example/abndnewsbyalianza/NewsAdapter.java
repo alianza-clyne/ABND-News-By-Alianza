@@ -66,12 +66,13 @@ public class NewsAdapter extends ArrayAdapter<News> {
         NewsArticleAuthorView.setText(ArticleAuthor);
 
         // Create a new Date object for the publication date of the news article
-        Date dateObject = new Date(currentNews.getNewsArticlePublicationDate());
+       //     Date dateObject = new Date(currentNews.getNewsArticlePublicationDate());
 
         // Find the TextView with view ID news_article_publication_date
         TextView NewsArticlePublicationDateView = (TextView) listItemView.findViewById(R.id.news_article_publication_date);
         // Format the news_article_publication_date string (i.e. "Mar 3, 2019")
-        String formattedArticlePublicationDate = formatDate(dateObject);
+        String formattedArticlePublicationDate = (currentNews.getNewsArticlePublicationDate());
+                //    String formattedArticlePublicationDate = formatDate(dateObject);
         // Display the publication date of the current entertainment news article in that TextView
         NewsArticlePublicationDateView.setText(formattedArticlePublicationDate);
 
@@ -83,8 +84,10 @@ public class NewsAdapter extends ArrayAdapter<News> {
     /**
      * Return the formatted news_article_publication_date string (i.e. "Mar 3, 2019") from a Date object.
      */
+    /*
     private String formatDate(Date dateObject) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("LLL dd, yyyy");
         return dateFormat.format(dateObject);
     }
+    */
 }
