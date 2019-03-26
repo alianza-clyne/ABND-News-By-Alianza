@@ -12,6 +12,11 @@
     android:paddingRight="16dp"
     android:paddingStart="16dp">
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -76,6 +81,7 @@
             Arrow image
             When clicked, a Guardian article will open in the user's web browser.
             -->
+            <!--
             <ImageView
                 android:layout_marginLeft="200dp"
                 android:layout_width="20dp"
@@ -84,9 +90,27 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/news_article_section_name"
                 android:layout_toRightOf="@id/news_article_title"
+                android:tint="@color/colorAccent"
                 android:scaleType="fitCenter"
-                android:src="@drawable/web_article_arrow" />
+                android:src="@drawable/ic_action_arrow_right" />
+                -->
 
         </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--
+Arrow image
+When clicked, a Guardian article will open in the user's web browser.
+-->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/web_article_arrow_height"
+        android:layout_gravity="end|center_vertical"
+        android:layout_weight="1"
+        android:tint="@color/colorAccent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_action_arrow_right" />
+
 
 </LinearLayout>

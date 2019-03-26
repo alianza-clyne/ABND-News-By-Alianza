@@ -21,7 +21,7 @@
     <style name="TitleText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:layout_marginTop">-8dp</item>
         <item name="android:textSize">@dimen/title_text</item>
         <item name="android:textColor">@color/textColorNewsArticleTitle</item>
     </style>
@@ -30,7 +30,7 @@
     <style name="DetailsText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:layout_marginTop">-8dp</item>
         <item name="android:textSize">@dimen/details_text</item>
         <item name="android:textColor">@color/textColorNewsArticleDetails</item>
     </style>
