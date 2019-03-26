@@ -9,7 +9,7 @@
     <dimen name="title_text">18sp</dimen>
 
     <!-- This is the measurement for the news article details text -->
-    <dimen name="details_text">16sp</dimen>
+    <dimen name="details_text">15sp</dimen>
 
     <!-- This is the measurement for the height of the list -->
     <dimen name="list_height">120dp</dimen>

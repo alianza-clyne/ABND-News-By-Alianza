@@ -36,6 +36,7 @@
             <TextView
                 android:id="@+id/news_article_section_name"
                 style="@style/SectionNameText"
+                android:textColor="@color/colorAccent"
                 android:layout_marginLeft="4dp"
                 android:layout_toRightOf="@id/newspaper_icon"
                 tools:text="Article Section"/>
@@ -76,24 +77,6 @@
                 android:layout_below="@id/news_article_title"
                 android:layout_marginLeft="20dp"
                 tools:text="Mar 6, 2019"/>
-
-            <!--
-            Arrow image
-            When clicked, a Guardian article will open in the user's web browser.
-            -->
-            <!--
-            <ImageView
-                android:layout_marginLeft="200dp"
-                android:layout_width="20dp"
-                android:layout_height="@dimen/web_article_arrow_height"
-                android:layout_gravity="end|center_vertical"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/news_article_section_name"
-                android:layout_toRightOf="@id/news_article_title"
-                android:tint="@color/colorAccent"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_action_arrow_right" />
-                -->
 
         </RelativeLayout>
 

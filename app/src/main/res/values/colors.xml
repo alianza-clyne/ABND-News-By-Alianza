@@ -14,7 +14,7 @@
     <color name="textColorNewsArticleSectionName">#2B3D4D</color>
 
     <!-- Text color for the title of the entertainment news article in the list item -->
-    <color name="textColorNewsArticleTitle">#2B3D4D</color>
+    <color name="textColorNewsArticleTitle">#000000</color>
 
     <!-- Text color for the details of the news in the list item -->
     <color name="textColorNewsArticleDetails">#23303D</color>
