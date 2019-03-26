@@ -173,18 +173,18 @@ public final class QueryUtils {
                 // Extract the value for the key called "webTitle"
                 String NewsArticleTitle = currentNewsArticle.getString("webTitle");
 
-                // Extract the value for the key called "webTitle"
+                // Extract the value for the key called "webTitle" in the array "tags".
+                // This allows us to get the author's name.
                 String NewsArticleAuthor = "";
-                // Check if array object "references" has any value
+
+                // Check if array object "tags" has any value
                 if (currentNewsArticle.getJSONArray("tags").length() > 0) {
-                    // If so, extract its (author) value
-                    NewsArticleAuthor = currentNewsArticle
-                            .getJSONArray("tags")
-                            .getJSONObject(0)
-                            .getString("webTitle");
+                    // If so, extract its (webTitle) value for the author's name
+                    NewsArticleAuthor = currentNewsArticle.getJSONArray("tags").getJSONObject(0).getString("webTitle");
                 }else{
                     NewsArticleAuthor = "No Author";
                 }
+
 
                 // Extract the value for the key called "webPublicationDate"
                 String NewsArticlePublicationDate = currentNewsArticle.getString("webPublicationDate");
