@@ -179,9 +179,9 @@ public final class QueryUtils {
                 if (currentNewsArticle.getJSONArray("tags").length() > 0) {
                     // If so, extract its (author) value
                     NewsArticleAuthor = currentNewsArticle
-                            .getJSONArray("references")
+                            .getJSONArray("tags")
                             .getJSONObject(0)
-                            .getString("author");
+                            .getString("webTitle");
                 }else{
                     NewsArticleAuthor = "No Author";
                 }
